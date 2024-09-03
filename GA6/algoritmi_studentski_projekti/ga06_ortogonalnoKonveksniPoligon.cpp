@@ -277,6 +277,12 @@ void PolygonCover::createCover()
     AlgoritamBaza_updateCanvasAndBlock();
 
 
+    if (_points.size() < 4)
+    {
+        qInfo() << "too few points!";
+        return;
+    }
+
 
     _N = _points[0], _E = _points[0], _S = _points[0], _W = _points[0];
 
